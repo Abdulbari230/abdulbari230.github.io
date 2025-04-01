@@ -140,3 +140,19 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  #job-experience {
+    margin: 0 1rem; /* shrink outer margin */
+  }
+
+  .job-experience-container {
+    align-items: center;
+    width: 100%;
+  }
+
+  .job-details {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1.5rem 0; /* vertical spacing only */
+  }
+}
