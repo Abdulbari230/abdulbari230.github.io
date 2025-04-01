@@ -104,3 +104,41 @@
 
 
 
+/* For iPad (768px-1024px) */
+@media (max-width: 1024px) {
+  .section__pic-container1,
+  .section__pic-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  #projects .about-containers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For iPhone (up to 767px) */
+@media (max-width: 767px) {
+  .section__pic-container1,
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  #experience .about-containers {
+    grid-template-columns: 1fr;
+  }
+  
+  #projects .about-containers {
+    grid-template-columns: 1fr;
+  }
+  
+  .job-details {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .company-logo {
+    margin-bottom: 1rem;
+  }
+}
