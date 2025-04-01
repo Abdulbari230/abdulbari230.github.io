@@ -590,7 +590,7 @@ footer p {
 #job-experience .arrow {
   position: absolute;
   right: -4rem;
-  bottom: 2.5rem;
+  bottom: 1rem;
   height: 2rem;
   width: 2rem;
   cursor: pointer;
@@ -685,3 +685,20 @@ footer p {
   overflow: hidden;
 }
 
+/* new adds */
+.job-experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#job-experience {
+  padding-bottom: 2rem; /* or even 2rem */
+}
+
+
+#experience {
+  margin-top: 0;
+  padding-top: 2rem; /* keep it gentle */
+}
