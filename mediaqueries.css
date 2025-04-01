@@ -4,10 +4,7 @@
     margin-bottom: 6rem;
   }
   .about-containers {
-    /* flex-wrap: wrap; */
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 2rem;
+    flex-wrap: wrap;
   }
   #contact,
   #projects {
@@ -105,24 +102,5 @@
   }
 }
 
-/* @media screen and (max-width: 900px) {
-  #job-experience {
-    max-width: 90%;
-  }
 
-  .job-details {
-    max-width: 100%;
-    padding: 1rem;
-  }
-} */
-@media (max-width: 1200px) {
-  #experience {
-    padding: 4vh 2rem; /* Reduce padding on smaller screens */
-  }
-}
 
-@media (max-width: 768px) {
-  #experience .about-containers {
-    grid-template-columns: 1fr; /* Single column on mobile */
-  }
-}
