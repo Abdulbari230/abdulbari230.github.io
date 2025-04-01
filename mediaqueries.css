@@ -159,65 +159,46 @@
 
 
 /* look more  */
-/* Job Experience Mobile Fixes */
 @media screen and (max-width: 768px) {
   #job-experience {
-    max-width: 100%;
-    padding: 2rem 1rem; /* Better mobile padding */
     margin: 0;
+    padding: 2rem 1rem; /* Adds breathing room left/right */
   }
 
   .job-experience-container {
-    gap: 1.5rem; /* More space between jobs */
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
   }
 
   .job-details {
-    flex-direction: column; /* Stack logo and text */
-    align-items: center;
-    text-align: center;
     width: 100%;
     max-width: 100%;
-    padding: 1.5rem 1rem; /* Better mobile padding */
     margin: 0;
-  }
-
-  .company-logo {
-    margin-bottom: 1rem; /* Space between logo and text */
-  }
-
-  .job-header {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .job-date {
-    margin-top: 0.5rem;
-  }
-
-  .job-description {
-    text-align: center;
-    padding: 0 0.5rem; /* Prevent text from touching edges */
+    box-sizing: border-box;
   }
 }
 
-/* For very small phones */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+  #job-experience {
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+
+  .job-experience-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
   .job-details {
-    padding: 1.2rem 0.8rem;
-  }
-  
-  .company-name {
-    font-size: 1.1rem;
-  }
-  
-  .job-title {
-    font-size: 1rem;
-  }
-  
-  .job-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
   }
 }
