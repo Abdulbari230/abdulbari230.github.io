@@ -102,43 +102,41 @@
   }
 }
 
+/* Added */
 
-
-/* For iPad (768px-1024px) */
-@media (max-width: 1024px) {
-  .section__pic-container1,
-  .section__pic-container {
-    width: 300px;
-    height: 300px;
-  }
-  
+@media screen and (max-width: 768px) {
+  #experience .about-containers,
   #projects .about-containers {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr !important; /* Stack cards */
+  }
+
+  .section__pic-container,
+  .section__pic-container1 {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto 2rem;
+  }
+
+  .section__pic-container img,
+  .section__pic-container1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  section {
+    margin: 0 1rem;
+  }
+
+  #experience .article-container {
+    grid-template-columns: 1fr;
   }
 }
 
-/* For iPhone (up to 767px) */
-@media (max-width: 767px) {
-  .section__pic-container1,
-  .section__pic-container {
-    width: 200px;
-    height: 200px;
-  }
-  
-  #experience .about-containers {
-    grid-template-columns: 1fr;
-  }
-  
-  #projects .about-containers {
-    grid-template-columns: 1fr;
-  }
-  
-  .job-details {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .company-logo {
-    margin-bottom: 1rem;
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
   }
 }
+
