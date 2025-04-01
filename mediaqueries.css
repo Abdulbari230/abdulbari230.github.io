@@ -202,3 +202,10 @@
     margin: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .job-details {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}

@@ -712,10 +712,18 @@ footer p {
 }
 
 #job-experience {
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 #experience {
   padding-top: 1rem;
   margin-top: 0;
+}
+
+/* new */
+.job-details {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
