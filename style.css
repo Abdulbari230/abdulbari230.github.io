@@ -515,7 +515,7 @@ footer p {
   max-width: 80%;
   margin: 0 auto;
   min-height: fit-content;
-  padding-bottom: 6rem; /* Space for arrow */
+  padding-bottom: 2rem; /* Space for arrow */
 }
 
 .job-experience-container {
@@ -711,3 +711,11 @@ footer p {
   gap: 1.5rem;
 }
 
+#job-experience {
+  padding-bottom: 1.5rem;
+}
+
+#experience {
+  padding-top: 1rem;
+  margin-top: 0;
+}
