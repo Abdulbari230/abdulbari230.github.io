@@ -101,3 +101,20 @@
     text-align: justify;
   }
 }
+
+/* added this */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .section__pic-container {
+    margin: 0 auto 2rem auto; /* full horizontal centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+}
