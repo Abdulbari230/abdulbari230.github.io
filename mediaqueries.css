@@ -101,28 +101,3 @@
     text-align: justify;
   }
 }
-
-
-/* iPad Portrait (768px-1024px) */
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-  #profile {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-/* iPad Landscape (1025px-1200px) */
-@media screen and (max-width: 1200px) and (min-width: 1025px) {
-  .section__pic-container {
-    margin: 0 auto 2rem;
-  }
-}
