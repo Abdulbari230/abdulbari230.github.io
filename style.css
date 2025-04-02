@@ -167,7 +167,6 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
-  position: relative;
 }
 
 .section__pic-container {
@@ -175,8 +174,6 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
-  /* overflow: hidden; */
-  /* border-radius: 50%; */
 }
 
 .section__text {
@@ -230,7 +227,6 @@ section {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
-  /* font-size: .8rem; */
 }
 
 .btn-color-1,
@@ -277,8 +273,6 @@ section {
   margin-top: 2rem;
 }
 
-
-
 .about-details-container {
   justify-content: center;
   flex-direction: column;
@@ -298,12 +292,9 @@ section {
   right: -5rem;
   bottom: 2.5rem;
 }
-.arrow:hover {
-  transform: scale(1.5); /* Slight hover effect */
-}
 
 .details-container {
-  padding: 1rem;
+  padding: 1.5rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
@@ -347,7 +338,7 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 1.2rem;
+  gap: 2.5rem;
   justify-content: space-around;
 }
 
@@ -366,9 +357,6 @@ article .icon {
 
 #projects {
   position: relative;
-  /* max-width: 70%; */
-  /* margin: 0 auto; */
-  
 }
 
 .color-container {
@@ -441,289 +429,4 @@ footer {
 
 footer p {
   text-align: center;
-}
-
-#experience .about-containers {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: auto auto; 
-  gap: 1rem;
-  justify-content: center;
-  align-items: start;
-}
-
-/* .section__pic-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-} */
-
-.section__pic-container1 {
-  display: flex;
-  height: 400px; 
-  width: 400px;
-  margin: auto 0;
-  overflow: hidden;
-  border-radius: 50%; 
-}
-.section__pic-container1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}
-
-#projects .about-containers {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 1.5rem; 
-  justify-content: center;
-  align-items: start;
-}
-
-
-
-
-
-/* Up Arrow Styles */
-.up-arrow {
-  position: absolute;
-  right: -5rem;
-  /* bottom: 2.5rem; */
-  transform: rotate(180deg); /* Points upward */
-}
-
-.up-arrow:hover {
-  transform: rotate(180deg) scale(1.5);
-}
-
-/* Ensure contact section has positioning context */
-#contact {
-  position: relative;
-  min-height: fit-content;
-  
-}
-
-
-
-
-/*  Job Experience */
-
-/* Job Experience Section */
-#job-experience {
-  position: relative;
-  padding: 4rem 0;
-  max-width: 80%;
-  margin: 0 auto;
-  min-height: fit-content;
-  padding-bottom: 2rem; /* Space for arrow */
-}
-
-.job-experience-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
-  position: relative;
-  /* width: 100%;  */
-}
-
-.job-details {
-  display: flex;
-  align-items: center; /* Changed from center for better text alignment */
-  background: rgb(250, 250, 250);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  border: 1px solid rgb(163, 163, 163);
-  max-width: 100%;
-  width: 90%;
-  /* margin: 0 auto; */
-  gap: 1.5rem;
-}
-
-.company-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 8px;
-  flex-shrink: 0; /* Prevents logo from shrinking */
-  
-}
-
-.job-info {
-  flex-grow: 1;
-}
-
-.job-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline; /* Better alignment of text */
-  flex-wrap: wrap; /* Allows wrapping on small screens */
-  gap: 0.5rem;
-}
-
-.company-name {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.job-title {
-  font-size: 1.1rem;
-  color: rgb(85, 85, 85);
-  margin: 0.3rem 0;
-  width: 100%; /* Forces title to new line */
-}
-
-.job-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-}
-
-.job-date {
-  font-weight: 500;
-  color: #777;
-  font-style: italic;
-}
-
-/* Arrow Styling */
-#job-experience .arrow {
-  position: absolute;
-  right: -4rem;
-  bottom: 1rem;
-  height: 2rem;
-  width: 2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-#job-experience .arrow:hover {
-  transform: scale(1.5);
-}
-
-
-/* SKILLS SECTION SPECIFIC STYLING */
-#experience .experience-details-container {
-  width: 100%;
-  max-width: none;
-  padding: 8 8rem; /* Add some side padding */
-}
-
-#experience .about-containers {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-#experience .details-container {
-  padding: 1.5rem;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-}
-
-#experience .article-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  justify-items: center;
-  padding: 0.5rem;
-}
-
-#experience article {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 200px;
-  padding: 0.5rem;
-}
-
-#experience article .icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
-
-#experience article div {
-  text-align: left;
-  flex-grow: 1;
-}
-
-#experience article h3 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-#experience .experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.5rem;
-  /* margin-bottom: 1.5rem; */
-}
-
-/* add */
-
-#hamburger-nav {
-  z-index: 10;
-  position: relative;
-}
-
-.section__pic-container1 {
-  aspect-ratio: 1 / 1;
-  width: 80vw;
-  max-width: 300px;
-  margin: 0 auto 2rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-/* new adds */
-.job-details {
-  box-sizing: border-box;
-}
-
-
-
-#job-experience {
-  padding-bottom: 2rem; /* or even 2rem */
-}
-
-
-#experience {
-  margin-top: 0;
-  padding-top: 2rem; /* keep it gentle */
-}
-
-
-
-/* look at it again  */
-.job-experience-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-#job-experience {
-  padding-bottom: 2rem;
-}
-
-#experience {
-  padding-top: 1rem;
-  margin-top: 0;
-}
-
-/* new */
-.job-details {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
