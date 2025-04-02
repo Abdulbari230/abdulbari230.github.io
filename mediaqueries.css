@@ -101,3 +101,10 @@
     text-align: justify;
   }
 }
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .job-card {
+    max-width: 100%;
+  }
+}
