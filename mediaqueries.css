@@ -134,4 +134,16 @@
     grid-template-columns: 1fr; /* Stack items in a single column */
   }
 }
+@media screen and (max-width: 600px) {
+  #projects .about-containers {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #projects .about-containers {
+    display: grid; /* Add this again */
+    grid-template-columns: 1fr;
+  }
+}
 
