@@ -198,7 +198,7 @@
   and (min-device-width: 820px) 
   and (max-device-width: 1180px) 
   and (orientation: portrait) {
-  /* Portrait-specific adjustments */
+  
 }
 
 /* Landscape */
@@ -206,5 +206,5 @@
   and (min-device-width: 820px) 
   and (max-device-width: 1180px) 
   and (orientation: landscape) {
-  /* Landscape-specific adjustments */
+ 
 }

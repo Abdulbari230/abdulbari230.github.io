@@ -548,3 +548,8 @@ footer p {
   justify-content: center;
   align-items: start;
 }
+
+
+#about .section__pic-container {
+  border: 2px solid red !important;
+}
