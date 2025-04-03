@@ -179,3 +179,11 @@
     margin: 0 auto;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #about .section__pic-container {
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
