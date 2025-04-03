@@ -108,3 +108,23 @@
     max-width: 100%;
   }
 }
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}

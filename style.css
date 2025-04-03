@@ -466,3 +466,85 @@ footer p {
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
 }
+
+/* PROJECTS SECTION */
+#projects {
+  position: relative;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.color-container {
+  border: 1px solid rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.color-container:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  margin: 1rem 0;
+  color: black;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  /* max-width: 70%; */
+  /* margin: 0 auto; */
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+#projects .about-containers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: start;
+}
