@@ -7,6 +7,10 @@
     <title>Abdulbari's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -44,8 +48,11 @@
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Abdulbari Ali</h1>
-        <p class="section__text__p2">Data Science Student</p>
+        <h1 class="title">Abdulbari Ahmed</h1>
+        <p class="section__text__p2">
+          <span class="static-text">I am  </span>
+          <span class="animated-roles"></span>
+        </p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -62,13 +69,13 @@
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://linkedin.com/'"
+            onclick="location.href='https://www.linkedin.com/in/abdulbariahmed/'"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/'"
+            onclick="location.href='https://github.com/Abdulbari230'"
           />
         </div>
       </div>
@@ -93,7 +100,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+              <p>3+ Internships <br />Data Analytics & Data Engineering</p>
             </div>
             <div class="details-container">
               <img
@@ -102,17 +109,19 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+              <p>B.Sc. Information Technology<br />Focus: Data Science</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+              I am in my <b>final year</b> of pursuing a
+              <b>B.S. in Information Technology</b> with a focus on
+              <b>Data Science</b> at the <b>University of Minnesota Twin – Cities</b>. Over the course of my studies, I have
+              completed <b>3+ internships</b>, gaining hands-on experience in
+              <b>data analysis, IT infrastructure, and business intelligence</b
+              >. As I approach graduation, I am eager to apply my skills in
+              real-world projects and continue growing in the field of data
+              science.
             </p>
           </div>
         </div>
@@ -125,6 +134,96 @@
       />
     </section>
 
+    <section id="job-experience">
+      <p class="section__text__p1">Where I've Worked</p>
+      <h1 class="title">Job Experience</h1>
+      <div class="experience-grid">
+        <!-- Job 1 -->
+        <div class="experience-card">
+          <div class="card-front">
+            <img src="./assets/Lincoln.jpg" alt="CHS Inc. logo" class="company-logo" />
+            <p class="job-position">Data Analytics Intern</p>
+            <p class="job-date">Summer 2025</p>
+            <p class="tap-hint">Tap for more info</p>
+          </div>
+          <div class="card-back">
+            <p class="job-summary">
+              At Lincoln Financial Group, I will support the Information Management team by using SQL, 
+              Power BI, and Python to analyze, clean, and visualize data, helping drive business decisions 
+              and implement data-driven solutions across teams.
+            </p>
+          </div>
+        </div>
+        
+        <div class="experience-card">
+          <div class="card-front">
+            <img src="./assets/chs.png" alt="CHS Inc. logo" class="company-logo" />
+            <p class="job-position">IT - Data Analytics Intern</p>
+            <p class="job-date">May 2024 – Aug 2024</p>
+            <p class="tap-hint">Tap for more info</p>
+          </div>
+          <div class="card-back">
+            <p class="job-summary">
+              At CHS Inc., I improved documentation practices by verifying IP addresses, 
+              developing ETL scripts for data extraction, and designing dashboards to visualize key i
+              nsights helping the team optimize data collection and workflow efficiency.
+            </p>
+          </div>
+        </div>
+    
+      
+        <div class="experience-card">
+          <div class="card-front">
+            <img src="./assets/ROQA.jpeg" alt="CHS Inc. logo" class="company-logo" />
+            <p class="job-position">SEO Analysis Intern</p>
+            <p class="job-date">January 2023 – March 2023</p>
+            <p class="tap-hint">Tap for more info</p>
+          </div>
+          <div class="card-back">
+            <p class="job-summary">
+              Improved digital infrastructure during a company rebranding to enhance security, 
+              performance, and user engagement. Analyzed data to drive infrastructure upgrades and 
+              supported project management through team collaboration and stakeholder communication.
+            </p>
+          </div>
+        </div>
+        <div class="experience-card">
+          <div class="card-front">
+            <img src="./assets/eagan.png" alt="CHS Inc. logo" class="company-logo" />
+            <p class="job-position">Engineering Intern</p>
+            <p class="job-date">May 2022 – Aug 2022</p>
+            <p class="tap-hint">Tap for more info</p>
+          </div>
+          <div class="card-back">
+            <p class="job-summary">
+              As an Engineering Intern at the City of Eagan, I conducted field surveys, 
+              traffic counts, and inspections, drafted road work plans using CAD software, 
+              and collaborated with engineering teams to document data, address safety concerns, 
+              and contribute to infrastructure planning and improvements.
+
+
+            </p>
+          </div>
+        </div>
+
+
+
+
+        
+        
+
+
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+        />
+
+
+
+    </section>
     
  
 
@@ -133,46 +232,82 @@
 
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <h1 class="title">Skills</h1>
       <div class="experience-grid">
         <!-- Box 1 -->
         <div class="experience-box">
-          <h2 class="experience-sub-title">Programming & Scripting</h2>
+          <h2 class="experience-sub-title">
+            <i class="fa-solid fa-terminal"></i> Programming & Scripting
+          </h2>
           <ul>
-            <li>Python</li>
-            <li>R</li>
-            <li>SQL</li>
-            <li>Bash</li>
+            <li>➤ Python</li>
+            <li>➤ Java</li>
+            <li>➤ SQL</li>
+            <li>➤ HTML/CSS</li>
+            
           </ul>
         </div>
+    
         <!-- Box 2 -->
         <div class="experience-box">
-          <h2 class="experience-sub-title">Data Manipulation & Analysis</h2>
+          <h2 class="experience-sub-title">
+            <i class="fa-solid fa-database"></i> Data Manipulation & Analysis
+          </h2>
           <ul>
-            <li>Pandas</li>
-            <li>NumPy</li>
-            <li>Excel (Advanced)</li>
-            <li>Data Cleaning</li>
+            <li>➤ Pandas</li>
+            <li>➤ NumPy</li>
+            <li>➤ Excel </li>
+            <li>➤ Data Cleaning</li>
           </ul>
         </div>
+    
         <!-- Box 3 -->
         <div class="experience-box">
-          <h2 class="experience-sub-title">Data Visualization</h2>
+          <h2 class="experience-sub-title">
+            <i class="fa-solid fa-chart-column"></i> Data Visualization
+          </h2>
           <ul>
-            <li>Matplotlib</li>
-            <li>Seaborn / Plotly</li>
-            <li>Tableau</li>
-            <li>Power BI</li>
+            <li>➤ Matplotlib</li>
+            <li>➤ Seaborn / Plotly</li>
+            <li>➤ Tableau</li>
+            <li>➤ Power BI</li>
           </ul>
         </div>
+    
         <!-- Box 4 -->
         <div class="experience-box">
-          <h2 class="experience-sub-title">Machine Learning & Tools</h2>
+          <h2 class="experience-sub-title">
+            <i class="fa-solid fa-robot"></i> Machine Learning & AI
+          </h2>
           <ul>
-            <li>Scikit-learn</li>
-            <li>TensorFlow (basic)</li>
-            <li>Regression, Clustering</li>
-            <li>Git / Jupyter Notebooks</li>
+            <li>➤ Scikit-learn</li>
+            <li>➤ TensorFlow </li>
+            <li>➤ Supervised Learning</li>
+            <li>➤ Unsupervised Learning</li>
+          </ul>
+        </div>
+        
+        <div class="experience-box">
+          <h2 class="experience-sub-title">
+            <i class="fa-solid fa-screwdriver-wrench"></i> Tools & Deployment
+          </h2>
+          <ul>
+            <li>➤ Jupyter Notebook</li>
+            <li>➤ Cloud Platforms</li>
+            <li>➤ Visual Studio Code</li>
+            <li>➤ Snowflake</li>
+          </ul>
+        </div>
+
+        <div class="experience-box">
+          <h2 class="experience-sub-title">
+            <i class="fa-solid fa-people-group"></i> Leadership & Collaboration
+          </h2>
+          <ul>
+            <li>➤ Mentorship</li>
+            <li>➤ Teamwork</li>
+            <li>➤Communication</li>
+            <li>➤ Initiative</li>
           </ul>
         </div>
       </div>
@@ -183,6 +318,7 @@
         onclick="location.href='./#projects'"
       />
     </section>
+    
 
     
 
@@ -194,12 +330,12 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
+                src="./assets/medialike.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">Poster Like Predictor</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -218,12 +354,12 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
+                src="./assets/houseprice.jpg"
                 alt="Project 2"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">House Price Predictor</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -242,16 +378,16 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-3.png"
+                src="./assets/crud.webp"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">PHP & MySQL CRUD </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/Abdulbari230/abdulbariahmed_phpcrudecrud'"
               >
                 Github
               </button>
@@ -265,30 +401,7 @@
           </div>
 
 
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Four</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+          
 
         </div>
       </div>
@@ -309,7 +422,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+          <p><a href="mailto:examplemail@gmail.com">abdulbariahmed000@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -317,7 +430,7 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/abdulbariahmed/">LinkedIn</a></p>
         </div>
       </div>
     </section>

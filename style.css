@@ -435,7 +435,7 @@ footer p {
 
 .experience-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem 0;
 }
@@ -549,7 +549,240 @@ footer p {
   align-items: start;
 }
 
+/* Updated experience section layout */
 
-#about .section__pic-container {
-  border: 2px solid red !important;
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
+
+.experience-box {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-box:hover {
+  transform: translateY(-5px);
+}
+
+.experience-sub-title {
+  color: #444;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1.5rem;
+}
+
+.experience-box li {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Optional icons */
+.experience-sub-title i {
+  color: #555;
+}
+
+
+/* check later  */
+
+/* Flip card styles */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  perspective: 1000px;
+}
+
+.experience-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: 200px; 
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+}
+
+/* .experience-card:hover {
+  transform: rotateY(180deg);
+} */
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-back {
+  background: white;
+  transform: rotateY(180deg);
+  border-radius: 1rem;
+  overflow-y: auto; 
+}
+
+.card-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.card-back li {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.experience-sub-title {
+  color: #444;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.job-position {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.job-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.experience-card.flipped {
+  transform: rotateY(180deg);
+}
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.card-front {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-back {
+  padding: 1rem;
+}
+
+.job-summary {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.experience-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  height: 220px;
+  transition: transform 0.6s, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+}
+
+.experience-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.40); 
+}
+
+
+#job-experience {
+  position: relative;
+}
+
+
+.arrow:hover {
+  transform: scale(1.5);
+}
+
+.tap-hint {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+.company-logo {
+  width: 70px;              
+  height: 70px;             
+  object-fit: contain;      
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.company-logo {
+  padding: 0.25rem;
+  background-color: #fff; 
+  border-radius: 0.5rem;
+}
+
+
+/* Animated Roles Text */
+.static-text {
+  display: inline-block;
+}
+
+.animated-roles {
+  display: inline-block;
+  position: relative;
+  color: #555; 
+  font-weight: 600;
+}
+
+/* Enhanced cursor styling */
+.cursor {
+  animation: blink 1s infinite;
+  font-weight: 400;
+  color: #333;
+}
+
+/* For smoother transitions */
+.animated-roles {
+  transition: width 0.1s ease;
+}
+/* PROJECT IMAGE SIZE FIX */
+.project-img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+

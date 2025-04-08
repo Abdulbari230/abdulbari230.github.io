@@ -208,3 +208,25 @@
   and (orientation: landscape) {
  
 }
+
+
+@media only screen 
+  and (min-device-width: 820px) 
+  and (max-device-width: 820px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  
+  #projects .about-containers {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    max-width: 800px !important;
+  }
+  
+  #projects .details-container {
+    width: calc(50% - 1rem) !important; /* Accounting for gap */
+    min-width: 300px !important;
+  }
+}
+
