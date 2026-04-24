@@ -1,232 +1,152 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
+/* ════════════════════════════════════════════════════
+   ABDULBARI AHMED — PORTFOLIO
+   mediaqueries.css — All responsive / breakpoint styles
+════════════════════════════════════════════════════ */
 
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+/* ── TABLET (≤ 1100px) ── */
+@media (max-width: 1100px) {
+
+  /* Nav */
+  .nav-links  { display: none; }
+  .hamburger  { display: flex; }
+  .mobile-menu { display: flex; }
+
+  /* Hero — single column, text on top, photo below */
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     text-align: center;
+    gap: 2.5rem;
+    padding: 7rem 5vw 4rem;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+  }
+
+  .hero-right {
+    order: 2;
+  }
+
+  .hero-bio { text-align: center; }
+  .hero-chips { justify-content: center; }
+  .hero-actions { justify-content: center; }
+  .scroll-indicator { display: none; }
+
+  .hero-photo-container {
+    width: 240px;
+    height: 290px;
+  }
+
+  /* Sections */
+  .exp-grid        { grid-template-columns: repeat(2, 1fr); }
+  .skills-layout   { grid-template-columns: 1fr; }
+  .projects-grid   { grid-template-columns: repeat(2, 1fr); }
+  .contact-layout  { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+
+/* ── MOBILE (≤ 680px) ── */
+@media (max-width: 680px) {
+
+  /* Hero */
+  .hero {
+    padding: 6rem 5vw 3rem;
+    gap: 2rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+  }
+
+  .hero-role-line {
+    font-size: 0.9rem;
     justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
-}
-
-/* Responsive tweaks */
-@media screen and (max-width: 600px) {
-  .job-card {
-    max-width: 100%;
-  }
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .projects-container {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-}
-
-@media (max-width: 600px) {
-  .projects-container {
-    grid-template-columns: 1fr; 
-  }
-}
-
-@media (max-width: 768px) {
-  .experience-grid {
-    grid-template-columns: 1fr; 
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #projects .about-containers {
-    grid-template-columns: 1fr; 
-  }
-}
-@media screen and (max-width: 600px) {
-  #projects .about-containers {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #projects .about-containers {
-    display: grid; 
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* fadd */
-
-/* iPad Air (5th gen) Specific Fix */
-@media only screen 
-  and (min-device-width: 820px) 
-  and (max-device-width: 1180px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-  
-  #about .section-container {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 3rem !important;
+    flex-wrap: wrap;
   }
 
-  #about .section__pic-container {
-    width: 280px !important;
-    height: 280px !important;
-    margin: 0 auto 2rem !important;
-    padding: 0 !important;
+  .hero-bio {
+    font-size: 0.95rem;
   }
 
-  #about .about-pic {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+  .hero-photo-container {
+    width: 200px;
+    height: 240px;
   }
 
-  #about .about-details-container {
-    width: 100% !important;
-    text-align: center !important;
+  .hero-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
   }
 
-  #about .about-containers {
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 1.5rem !important;
+  .stat-divider { width: 1px; height: 32px; }
+
+  .btn {
+    font-size: 0.72rem;
+    padding: 0.75rem 1.25rem;
   }
 
-  #about .details-container {
-    min-width: 250px !important;
-    margin: 0 !important;
+  /* Sections */
+  .section { padding: 4rem 0; }
+
+  .exp-grid        { grid-template-columns: 1fr; }
+  .projects-grid   { grid-template-columns: 1fr; }
+
+  .section-title   { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+
+  /* Experience cards */
+  .exp-card { height: 220px; }
+
+  /* Skills */
+  .skill-group { padding: 1.25rem; }
+  .skill-bubble { font-size: 0.68rem; padding: 0.3rem 0.7rem; }
+
+  /* Projects */
+  .project-body h3 { font-size: 1rem; }
+
+  /* Contact terminal */
+  .contact-terminal { font-size: 0.8rem; }
+  .terminal-body { padding: 1.25rem; }
+
+  /* Footer */
+  .footer-nav { display: none; }
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
 }
 
 
-/* Portrait */
-@media only screen 
-  and (min-device-width: 820px) 
-  and (max-device-width: 1180px) 
-  and (orientation: portrait) {
-  
-}
+/* ── SMALL MOBILE (≤ 400px) ── */
+@media (max-width: 400px) {
 
-/* Landscape */
-@media only screen 
-  and (min-device-width: 820px) 
-  and (max-device-width: 1180px) 
-  and (orientation: landscape) {
- 
-}
+  .hero-name { font-size: 2.5rem; }
 
-
-@media only screen 
-  and (min-device-width: 820px) 
-  and (max-device-width: 820px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-  
-  #projects .about-containers {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 1.5rem !important;
-    max-width: 800px !important;
+  .hero-photo-container {
+    width: 170px;
+    height: 210px;
   }
-  
-  #projects .details-container {
-    width: calc(50% - 1rem) !important; /* Accounting for gap */
-    min-width: 300px !important;
-  }
-}
 
+  .hero-stats {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .stat-n  { font-size: 1.2rem; }
+  .stat-l  { font-size: 0.6rem; }
+
+  .stat-divider { height: 28px; }
+
+  .btn { width: 100%; justify-content: center; }
+  .hero-actions { flex-direction: column; width: 100%; }
+
+  .exp-card { height: 200px; }
+}

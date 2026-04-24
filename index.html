@@ -1,472 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdulbari's Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Abdulbari Ahmed</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#job-experience">Experience</a></li>
-          <li><a href="#experience">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulbari Ahmed </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR
+  ═══════════════════════════════════════════ -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursor-dot"></div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>AA<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#experience" data-text="Experience">Experience</a></li>
+        <li><a href="#skills" data-text="Skills">Skills</a></li>
+        <li><a href="#projects" data-text="Projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta" data-text="Contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#experience" class="mobile-link">01 — Experience</a>
+      <a href="#skills" class="mobile-link">02 — Skills</a>
+      <a href="#projects" class="mobile-link">03 — Projects</a>
+      <a href="#contact" class="mobile-link">04 — Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span class="status-mono">Currently: BI/Data Developer</span>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Abdulbari Ahmed</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#job-experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+
+      <h1 class="hero-name">
+        <span class="hero-first reveal-line">Abdulbari</span>
+        <span class="hero-last reveal-line">Ahmed</span>
+      </h1>
+
+      <div class="hero-role-line">
+        <span class="role-prefix">I am —</span>
+        <span class="typed-text" id="typed"></span><span class="typed-cursor">█</span>
       </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/headshotcopy.png" alt="John Doe profile picture" />
+
+      <p class="hero-bio">
+        I love data, the patterns hiding inside it, and the stories it tells.
+        I'm driven by hard problems, clean code, and the energy of building alongside 
+        great people. If you're working on something ambitious — <em>let's connect.</em>
+      </p>
+
+      <div class="hero-chips">
+        <span class="chip"><i class="fa-solid fa-location-dot"></i> Minnesota, USA</span>
+        <span class="chip"><i class="fa-solid fa-graduation-cap"></i> UMN Twin Cities</span>
+        <span class="chip"><i class="fa-solid fa-briefcase"></i> Open to Opportunities</span>
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Abdulbari Ahmed</h1>
-        <p class="section__text__p2">
-          <span class="static-text">I am  </span>
-          <span class="animated-roles"></span>
-        </p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Ahmed-resume.pdf')"
-          >
-            Résumé
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/abdulbariahmed/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Abdulbari230'"
-          />
-        </div>
+
+      <div class="hero-actions">
+        <a href="./assets/Ahmed-resume.pdf" target="_blank" class="btn btn-primary">
+          <i class="fa-solid fa-file-arrow-down"></i> Download CV
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fa-solid fa-arrow-right"></i> Get In Touch
+        </a>
       </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/umnpic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-photo-container">
+        <div class="photo-ring"></div>
+        <div class="photo-frame">
+          <img src="./assets/headshotcopy.png" alt="Abdulbari Ahmed" />
+          <div class="photo-gradient"></div>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>3+ Internships <br />Data Analytics & Data Engineering</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Information Technology<br />Focus: Data Science</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I am in my <b>final year</b> of pursuing a
-              <b>B.S. in Information Technology</b> with a focus on
-              <b>Data Science</b> at the <b>University of Minnesota Twin – Cities</b>. Over the course of my studies, I have
-              completed <b>3+ internships</b>, gaining hands-on experience in
-              <b>data analysis, IT infrastructure, and business intelligence</b
-              >. As I approach graduation, I am eager to apply my skills in
-              real-world projects and continue growing in the field of data
-              science.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#job-experience'"
-      />
-    </section>
-
-    <section id="job-experience">
-      <p class="section__text__p1">Where I've Worked</p>
-      <h1 class="title">Job Experience</h1>
-      <div class="experience-grid">
-        <!-- Job 1 -->
-        <div class="experience-card">
-          <div class="card-front">
-            <img src="./assets/Lincoln.jpg" alt="Lincoln logo" class="company-logo" />
-            <p class="job-position">Data Analytics Intern</p>
-            <p class="job-date">Summer 2025</p>
-            <p class="tap-hint">Tap for more info</p>
-          </div>
-          <div class="card-back">
-            <p class="job-summary">
-              At Lincoln Financial Group, I will support the Information Management team by using SQL, 
-              Power BI, and Python to analyze, clean, and visualize data, helping drive business decisions 
-              and implement data-driven solutions across teams.
-            </p>
-          </div>
-        </div>
-        
-        <div class="experience-card">
-          <div class="card-front">
-            <img src="./assets/chs.png" alt="CHS Inc. logo" class="company-logo" />
-            <p class="job-position">IT - Data Analytics Intern</p>
-            <p class="job-date">May 2024 – Aug 2024</p>
-            <p class="tap-hint">Tap for more info</p>
-          </div>
-          <div class="card-back">
-            <p class="job-summary">
-              At CHS Inc., I improved documentation practices by verifying IP addresses, 
-              developing ETL scripts for data extraction, and designing dashboards to visualize key i
-              nsights helping the team optimize data collection and workflow efficiency.
-            </p>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <div class="card-front">
-            <img src="./assets/logo.jpeg" alt="CHS Inc. logo" class="company-logo" />
-            <p class="job-position">Data Engineering Intern</p>
-            <p class="job-date">December 2023 - April 2024</p>
-            <p class="tap-hint">Tap for more info</p>
-          </div>
-          <div class="card-back">
-            <p class="job-summary">
-              Designed and implemented automated ETL workflows using Python and 
-              pandas, enhanced data quality for reporting, and documented processes 
-              to support future scalability and clarity.
-
-            </p>
-          </div>
-        </div>
-    
-      
-        <div class="experience-card">
-          <div class="card-front">
-            <img src="./assets/ROQA.jpeg" alt="Roqa logo" class="company-logo" />
-            <p class="job-position">SEO Analysis Intern</p>
-            <p class="job-date">January 2023 – March 2023</p>
-            <p class="tap-hint">Tap for more info</p>
-          </div>
-          <div class="card-back">
-            <p class="job-summary">
-              Improved digital infrastructure during a company rebranding to enhance security, 
-              performance, and user engagement. Analyzed data to drive infrastructure upgrades and 
-              supported project management through team collaboration and stakeholder communication.
-            </p>
-          </div>
-        </div>
-
-
-        <div class="experience-card">
-          <div class="card-front">
-            <img src="./assets/eagan.png" alt="Eagan city logo" class="company-logo" />
-            <p class="job-position">Engineering Intern</p>
-            <p class="job-date">May 2022 – Aug 2022</p>
-            <p class="tap-hint">Tap for more info</p>
-          </div>
-          <div class="card-back">
-            <p class="job-summary">
-              As an Engineering Intern at the City of Eagan, I conducted field surveys, 
-              traffic counts, and inspections, drafted road work plans using CAD software, 
-              and collaborated with engineering teams to document data, address safety concerns, 
-              and contribute to infrastructure planning and improvements.
-
-
-            </p>
-          </div>
-        </div>
-
-
-
-
-        
-        
-
 
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-        />
 
-
-
-    </section>
-    
- 
-
-  
-
-
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-grid">
-        <!-- Box 1 -->
-        <div class="experience-box">
-          <h2 class="experience-sub-title">
-            <i class="fa-solid fa-terminal"></i> Programming & Scripting
-          </h2>
-          <ul>
-            <li>➤ Python</li>
-            <li>➤ Java</li>
-            <li>➤ SQL</li>
-            <li>➤ HTML/CSS</li>
-            
-          </ul>
+      <div class="hero-stats">
+        <div class="stat-block">
+          <span class="stat-n">5+</span>
+          <span class="stat-l">Internships</span>
         </div>
-    
-        <!-- Box 2 -->
-        <div class="experience-box">
-          <h2 class="experience-sub-title">
-            <i class="fa-solid fa-database"></i> Data Manipulation & Analysis
-          </h2>
-          <ul>
-            <li>➤ Pandas</li>
-            <li>➤ NumPy</li>
-            <li>➤ Excel </li>
-            <li>➤ Data Cleaning</li>
-          </ul>
+        <div class="stat-divider"></div>
+        <div class="stat-block">
+          <span class="stat-n">3+</span>
+          <span class="stat-l">Years EXP</span>
         </div>
-    
-        <!-- Box 3 -->
-        <div class="experience-box">
-          <h2 class="experience-sub-title">
-            <i class="fa-solid fa-chart-column"></i> Data Visualization
-          </h2>
-          <ul>
-            <li>➤ Matplotlib</li>
-            <li>➤ Seaborn / Plotly</li>
-            <li>➤ Tableau</li>
-            <li>➤ Power BI</li>
-          </ul>
-        </div>
-    
-        <!-- Box 4 -->
-        <div class="experience-box">
-          <h2 class="experience-sub-title">
-            <i class="fa-solid fa-robot"></i> Machine Learning & AI
-          </h2>
-          <ul>
-            <li>➤ Scikit-learn</li>
-            <li>➤ TensorFlow </li>
-            <li>➤ Supervised Learning</li>
-            <li>➤ Unsupervised Learning</li>
-          </ul>
-        </div>
-        
-        <div class="experience-box">
-          <h2 class="experience-sub-title">
-            <i class="fa-solid fa-screwdriver-wrench"></i> Tools & Deployment
-          </h2>
-          <ul>
-            <li>➤ Jupyter Notebook</li>
-            <li>➤ Cloud Platforms</li>
-            <li>➤ Visual Studio Code</li>
-            <li>➤ Snowflake</li>
-          </ul>
-        </div>
-
-        <div class="experience-box">
-          <h2 class="experience-sub-title">
-            <i class="fa-solid fa-people-group"></i> Leadership & Collaboration
-          </h2>
-          <ul>
-            <li>➤ Mentorship</li>
-            <li>➤ Teamwork</li>
-            <li>➤Communication</li>
-            <li>➤ Initiative</li>
-          </ul>
+        <div class="stat-divider"></div>
+        <div class="stat-block">
+          <span class="stat-n">10+</span>
+          <span class="stat-l">Projects</span>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    
+    </div>
 
-    
+    <a href="#experience" class="scroll-indicator">
+      <span class="scroll-mono">scroll</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
 
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/medialike.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Poster Like Predictor</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════════════════ -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <div class="section-tag light">02 — Experience</div>
+      <h2 class="section-title light">Where I've <em>worked</em></h2>
+      <p class="section-sub light">Click any card to flip it and read more.</p>
+
+      <div class="exp-grid">
+
+        <div class="exp-card" data-tilt>
+          <div class="exp-front">
+            <div class="exp-current-badge">● Current</div>
+            <img src="./assets/Lincoln.jpg" alt="Lincoln Financial" class="exp-logo" />
+            <h3>Application Developer</h3>
+            <p class="exp-company">Lincoln Financial Group</p>
+            <p class="exp-date">2025 – Present</p>
+            <div class="exp-flip-hint"><i class="fa-solid fa-rotate"></i> flip</div>
+          </div>
+          <div class="exp-back">
+            <h4>Lincoln Financial Group</h4>
+            <p>Writing and maintaining SQL-based data pipelines in Dataiku, centralizing data from multiple sources into a single source of truth for the organization. Working closely with data and engineering teams to ensure pipeline reliability, data quality, and actionable business insights.</p>
+          </div>
+        </div>
+
+        <div class="exp-card" data-tilt>
+          <div class="exp-front">
+            <img src="./assets/Lincoln.jpg" alt="Lincoln Financial" class="exp-logo" />
+            <h3>Data Analytics Intern</h3>
+            <p class="exp-company">Lincoln Financial Group</p>
+            <p class="exp-date">Summer 2024</p>
+            <div class="exp-flip-hint"><i class="fa-solid fa-rotate"></i> flip</div>
+          </div>
+          <div class="exp-back">
+            <h4>Lincoln Financial Group</h4>
+            <p>Supported the Information Management team using SQL, Power BI, and Python to analyze, clean, and visualize data — driving business decisions and implementing data-driven solutions across teams.</p>
+          </div>
+        </div>
+
+        <div class="exp-card" data-tilt>
+          <div class="exp-front">
+            <img src="./assets/chs.png" alt="CHS Inc." class="exp-logo" />
+            <h3>IT – Data Analytics Intern</h3>
+            <p class="exp-company">CHS Inc.</p>
+            <p class="exp-date">May – Aug 2024</p>
+            <div class="exp-flip-hint"><i class="fa-solid fa-rotate"></i> flip</div>
+          </div>
+          <div class="exp-back">
+            <h4>CHS Inc.</h4>
+            <p>Improved documentation by verifying IP addresses, developed ETL scripts for data extraction, and designed dashboards to visualize key insights — optimizing data collection and workflow efficiency.</p>
+          </div>
+        </div>
+
+        <div class="exp-card" data-tilt>
+          <div class="exp-front">
+            <img src="./assets/logo.jpeg" alt="Data Engineering" class="exp-logo" />
+            <h3>Data Engineering Intern</h3>
+            <p class="exp-company">Confidential</p>
+            <p class="exp-date">Dec 2023 – Apr 2024</p>
+            <div class="exp-flip-hint"><i class="fa-solid fa-rotate"></i> flip</div>
+          </div>
+          <div class="exp-back">
+            <h4>Data Engineering</h4>
+            <p>Designed and implemented automated ETL workflows using Python and pandas. Enhanced data quality for downstream reporting and documented processes to support future scalability.</p>
+          </div>
+        </div>
+
+        <div class="exp-card" data-tilt>
+          <div class="exp-front">
+            <img src="./assets/ROQA.jpeg" alt="ROQA" class="exp-logo" />
+            <h3>SEO Analysis Intern</h3>
+            <p class="exp-company">ROQA</p>
+            <p class="exp-date">Jan – Mar 2023</p>
+            <div class="exp-flip-hint"><i class="fa-solid fa-rotate"></i> flip</div>
+          </div>
+          <div class="exp-back">
+            <h4>ROQA</h4>
+            <p>Improved digital infrastructure during a company rebranding — enhancing security, performance, and user engagement. Used data analysis to drive infrastructure upgrades and stakeholder communication.</p>
+          </div>
+        </div>
+
+        <div class="exp-card" data-tilt>
+          <div class="exp-front">
+            <img src="./assets/eagan.png" alt="City of Eagan" class="exp-logo" />
+            <h3>Engineering Intern</h3>
+            <p class="exp-company">City of Eagan</p>
+            <p class="exp-date">May – Aug 2022</p>
+            <div class="exp-flip-hint"><i class="fa-solid fa-rotate"></i> flip</div>
+          </div>
+          <div class="exp-back">
+            <h4>City of Eagan</h4>
+            <p>Conducted field surveys, traffic counts, and inspections. Drafted road work plans using CAD software and collaborated with engineering teams on infrastructure planning and improvements.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-tag">03 — Skills</div>
+      <h2 class="section-title">My <em>toolkit</em></h2>
+
+      <div class="skills-layout">
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-group-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">Python</span>
+            <span class="skill-bubble">SQL</span>
+            <span class="skill-bubble">Java</span>
+            <span class="skill-bubble">HTML</span>
+            <span class="skill-bubble">CSS</span>
+            <span class="skill-bubble">JavaScript</span>
+            <span class="skill-bubble">PHP</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-group-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Data & Analytics</h3>
+          </div>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">Pandas</span>
+            <span class="skill-bubble">NumPy</span>
+            <span class="skill-bubble">Power BI</span>
+            <span class="skill-bubble">Tableau</span>
+            <span class="skill-bubble">ETL Pipelines</span>
+            <span class="skill-bubble">Snowflake</span>
+            <span class="skill-bubble">Excel</span>
+            <span class="skill-bubble">Data Cleaning</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-group-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3>ML & AI</h3>
+          </div>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">Scikit-learn</span>
+            <span class="skill-bubble">TensorFlow</span>
+            <span class="skill-bubble">Supervised ML</span>
+            <span class="skill-bubble">Unsupervised ML</span>
+            <span class="skill-bubble">Data Modeling</span>
+            <span class="skill-bubble">Matplotlib</span>
+            <span class="skill-bubble">Seaborn</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-group-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">Git / GitHub</span>
+            <span class="skill-bubble">Jupyter</span>
+            <span class="skill-bubble">VS Code</span>
+            <span class="skill-bubble">Cloud Platforms</span>
+            <span class="skill-bubble">Agile / Scrum</span>
+            <span class="skill-bubble">MySQL</span>
+            <span class="skill-bubble">Plotly</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════ -->
+  <section id="projects" class="section section-dark">
+    <div class="container">
+      <div class="section-tag light">04 — Projects</div>
+      <h2 class="section-title light">Selected <em>work</em></h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-img-wrap">
+            <img src="./assets/medialike.png" alt="Poster Like Predictor" />
+            <div class="project-overlay">
+              <a href="https://github.com/" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://github.com/" target="_blank" class="overlay-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/houseprice.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-num">01</span>
+              <span class="project-type">Machine Learning</span>
             </div>
-            <h2 class="experience-sub-title project-title">House Price Predictor</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+            <h3>Poster Like Predictor</h3>
+            <p>Predicting social media engagement using ML models trained on image metadata features. Built with Python, Scikit-learn, and pandas.</p>
+            <div class="project-stack">
+              <span>Python</span><span>Scikit-learn</span><span>Pandas</span>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/crud.webp"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">PHP & MySQL CRUD </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Abdulbari230/abdulbariahmed_phpcrudecrud'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/houseprice.jpg" alt="House Price Predictor" />
+            <div class="project-overlay">
+              <a href="https://github.com/" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://github.com/" target="_blank" class="overlay-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
           </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-num">02</span>
+              <span class="project-type">Data Science</span>
+            </div>
+            <h3>House Price Predictor</h3>
+            <p>Regression model predicting housing prices from property features, with full exploratory data analysis and visualization.</p>
+            <div class="project-stack">
+              <span>Python</span><span>NumPy</span><span>Matplotlib</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/crud.webp" alt="PHP MySQL CRUD" />
+            <div class="project-overlay">
+              <a href="https://github.com/Abdulbari230/abdulbariahmed_phpcrudecrud" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://github.com/" target="_blank" class="overlay-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-num">03</span>
+              <span class="project-type">Full Stack</span>
+            </div>
+            <h3>PHP & MySQL CRUD App</h3>
+            <p>Full-stack application with PHP backend and MySQL for dynamic data management, featuring clean UI and full CRUD operations.</p>
+            <div class="project-stack">
+              <span>PHP</span><span>MySQL</span><span>HTML/CSS</span>
+            </div>
+          </div>
+        </div>
 
-          
+      </div>
+    </div>
+  </section>
 
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-tag">05 — Contact</div>
+
+      <div class="contact-layout">
+        <div class="contact-left">
+          <h2 class="section-title">Let's <em>build</em><br>something<br>together.</h2>
+          <p class="contact-sub">
+            I love collaborating on projects involving data, applications, or anything 
+            at the intersection. Whether it's a quick chat or a big idea — reach out.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:abdulbariahmed000@gmail.com" class="contact-link">
+              <div class="contact-link-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-val">abdulbariahmed000@gmail.com</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link-arrow"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/abdulbariahmed/" target="_blank" class="contact-link">
+              <div class="contact-link-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-val">abdulbariahmed</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link-arrow"></i>
+            </a>
+            <a href="https://github.com/Abdulbari230" target="_blank" class="contact-link">
+              <div class="contact-link-icon"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-val">Abdulbari230</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <div class="contact-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="terminal-title">message.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-green">$</span> <span class="t-blue">echo</span> "Hello Abdulbari"</p>
+              <p class="t-white">Hello Abdulbari</p>
+              <p><span class="t-green">$</span> <span class="t-blue">cat</span> availability.txt</p>
+              <p class="t-white">Open to new opportunities.</p>
+              <p class="t-white">Response time: &lt; 24 hours.</p>
+              <p><span class="t-green">$</span> <span class="t-blue">./connect</span> --with=you</p>
+              <p class="t-white">Initiating handshake...</p>
+              <p class="t-green t-blink">Ready. Your move. ▌</p>
+            </div>
+          </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">abdulbariahmed000@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/abdulbariahmed/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#job-experience">Experience</a></li>
-            <li><a href="#experience">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2025 Abdulbari Ahmed. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">[</span>AA<span class="logo-bracket">]</span></span>
+      <ul class="footer-nav">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 Abdulbari Ahmed — Built with passion</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
